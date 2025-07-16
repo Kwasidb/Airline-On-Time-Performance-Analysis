@@ -14,9 +14,9 @@ Stakeholders across the DOT, including regulatory teams, airport authorities, in
 
 Insights and recommendations are provided on the following key areas:
 
-- Delay Drivers: What are the primary contributors to flight delays? Can these delays be mitigated? Where and when are delays most frequently occurring?
+- Delay Trends: What are the primary contributors to flight delays? Can these delays be mitigated? Where and when are delays most frequently occurring?
   
-- Airport & Route Analysis: Which airports experience the highest volumes of delayed or canceled flights? Are there specific routes that underperform or show operational challenges?
+- Airport & Route Analysis: Which airports experience the highest volumes of delayed flights? Are there specific routes that underperform or show operational challenges?
 
 - Airline Operational Performance: Which airlines consistently meet their schedules? Are certain carriers outperforming others in terms of cancellations and on-time arrivals?
 
@@ -51,9 +51,61 @@ The Department of Transportation’s main database structure for this analysis c
 ## Executive Summary
 
 ### Overview of Findings
-This analysis of U.S. commercial flight performance revealed key operational inefficiencies and delay patterns impacting both airlines and airports. Reporting airlines across the industry maintain a 84% on-time departure rate, with 16% of flights being delayed for 15 minutes or more. Flight cancellations should not pose a major concern for leadership, as cancellations only account for 1% of total flights. Major hubs like Atlanta, Chicago, and Dallas handled the highest volumes, often experiencing notable delay variability.
+This analysis of 1.78 million flights reveals that 84% depart on time, yet nearly 292,000 flights experience delays, averaging 67 minutes per delay. Flight volume is highly concentrated among five carriers, who dominate both positive and negative delay performance, with Southwest showing the highest delay rate at 18%. Major metro airports like Dallas/Fort Worth and Chicago lead in total delay minutes, driven mainly by controllable factors such as late aircraft and carrier-related issues, which together account for over 55% of delays. Delays fluctuate across the week, peaking on Sundays and Fridays, aligning with typical weekend travel patterns and passenger behavior.
 
-![Overview](Report%20Images/Overview.pdf)
+![Overview](Report%20Images/Overview.png)
+
+## Insights Deep Dive
+
+## Delay Trends
+
+- December saw a sharp spike in delay minutes despite similar flight volumes compared to October and November — with 8.8 million delay minutes in December versus 4.9 million in October (an 80% increase). This indicates a growing delay severity at year-end.
+
+- Analyzing delay causes from October to December shows carrier delays decreased by 8.56%, but late aircraft delays increased by 3.68%, highlighting that equipment availability issues worsened in December.
+
+- National Air System and weather-related delays also rose slightly by 1.75% and 3.16%, respectively, contributing to the overall delay increase during winter months.
+
+- The surge in December delay minutes primarily stems from late aircraft delays at Dallas/Fort Worth (DFW), largely driven by American Airlines, which aligns with their DFW headquarters location.
+
+![Overview](Report%20Images/Delay%20Drivers.png)
+
+- Evening flights have the highest number of delays.
+Despite having fewer total flights (451k), evening flights experienced 113k delays, making them the most delayed time block. In contrast, the morning had the most flights (748k) but only 47k delays, highlighting a compounding delay trend as the day progresses.
+
+- Morning has the highest flight volume but fewer delays.
+The morning time block accounted for 748k total flights, the highest among all periods. However, it had just 47k delayed flights, the lowest count, indicating that earlier flights are generally more reliable and less affected by system-wide delays.
+
+- Flight activity and delays drop significantly at night.
+Only 60k flights occurred during the night hours, with 48k delays. While delays per flight are proportionally high at night, the overall volume is very low, suggesting limited late-night operations and potential knock-on effects from earlier delays.
+
+- Average flight distance steadily increases through Q4.
+Flights in October averaged 816 miles, rising to 826 miles in November, and 843 miles in December. This trend could reflect longer holiday-season travel and contributes to strain on operations, increasing the risk of cumulative delays throughout the day.
+
+![Overview](Report%20Images/Time%20Analysis.png)
+
+### Airport & Route Analysis
+
+- ATL (Atlanta) is the busiest airport in the U.S.
+From the dataset, ATL recorded the highest number of flights, consistently topping monthly volume charts. This aligns with ATL’s role as a major domestic and international hub.
+
+- DFW (Dallas-Fort Worth) has the highest number of delays among origin airports.
+Despite not being the busiest, DFW had the most origin delays overall. This may be due to its size, complexity, and hub operations — especially considering American Airlines’ heavy presence.
+
+- LAX to SFO is the most frequently flown route.
+This high-traffic short-haul route saw the highest number of flights across the dataset. It highlights strong regional travel demand in California.
+
+- LAX to JFK is the most delayed route.
+This long-haul coast-to-coast route recorded the highest number of delays, suggesting persistent congestion or operational challenges between two of the country's busiest airports.
+
+- Chicago, Atlanta, Dallas-Fort Worth, Denver, and New York were the top 5 flight hubs by volume. Chicago held the #1 position for overall flight traffic, making it a key operational and strategic hub.
+
+- Flight routes between major metro pairs—Chicago–New York, New York–Boston, LA–SF—dominated traffic, collectively accounting for thousands of flights. These routes are prime targets for demand forecasting and dynamic pricing.
+
+- Dallas/Fort Worth, O'Hare, and Denver experienced the most weather-related departure delays, with Dallas/Fort Worth accumulating the highest total. These insights can support airport-level planning and weather contingency strategies.
+
+- Hartsfield–Jackson Atlanta International consistently ranked as the #1 airport for monthly flight volume, maintaining its dominance across all three months of Q4.
+
+![Overview](Report%20Images/Location%20Analysis.png)
 
 ### Airline Operational Performance
 
@@ -65,46 +117,25 @@ This analysis of U.S. commercial flight performance revealed key operational ine
 
 - Controllable delays (carrier and national system-related) made up a significant share of total delays for certain airlines—up to 60%, indicating room for internal process improvements.
 
-### Airport & Route Analysis
-
-- Chicago, Atlanta, Dallas-Fort Worth, Denver, and New York were the top 5 flight hubs by volume. Chicago held the #1 position for overall flight traffic, making it a key operational and strategic hub.
-
-- Flight routes between major metro pairs—Chicago–New York, New York–Boston, LA–SF—dominated traffic, collectively accounting for thousands of flights. These routes are prime targets for demand forecasting and dynamic pricing.
-
-- Dallas/Fort Worth, O'Hare, and Denver experienced the most weather-related departure delays, with Dallas/Fort Worth accumulating the highest total. These insights can support airport-level planning and weather contingency strategies.
-
-- Hartsfield–Jackson Atlanta International consistently ranked as the #1 airport for monthly flight volume, maintaining its dominance across all three months of Q4.
-
-### Flight Delay Trends and Patterns
-
-- Only 16.4% of all flights experienced delays of 15+ minutes. Among those, the average delay was 66–67 minutes, signaling that while delays are not extremely frequent, they are substantial when they occur.
-
-- Medium-duration flights (2–4 hours) had the highest average departure delay at ~9 minutes, slightly higher than long and short flights. Delay time does not increase linearly with flight length, debunking common assumptions.
-
-- There is no meaningful correlation (CORR = -0.01) between flight distance and arrival delay, indicating that other factors (weather, scheduling, volume) likely drive most delays.
-
-- Monday at 7AM is the busiest flying time, while Wednesday at 4AM is the least busy. These patterns suggest opportunities for load balancing and passenger incentive strategies.
-
 ---
+## Recommedations
 
-## Recommendations
+Based on the insights and findings above, we would recommend the Operations and Network Planning teams to consider the following:
 
-Based on the insights and findings above, we would recommend the Operations and Strategy teams to consider the following:
+- Observation: Delays spike significantly during evening hours, with 113K delayed flights out of 451K total in that timeframe.
+Recommendation: Evaluate flight schedules and staffing strategies for evening operations to reduce congestion and delay risks.
 
-- Endeavor Air consistently ranked highest in on-time performance across all months.
-Recommendation: Use Endeavor’s scheduling and logistics practices as a benchmark for other carriers to improve operational efficiency.
+- Observation: Sunday is the busiest day for flights, and also shows high delay counts.
+Recommendation: Increase operational capacity (e.g., more ground crew, longer buffers) during Sundays to improve on-time performance.
 
-- Airports like Dallas/Fort Worth and O’Hare experience the most weather-related delays.
-Recommendation: Strengthen contingency planning and resource allocation for high-delay airports during adverse weather months.
+- Observation: DFW is the most delayed origin airport.
+Recommendation: Investigate ground operations, runway capacity, and weather patterns at DFW to identify root causes and implement targeted delay-reduction strategies.
 
-- Medium-duration flights (121–240 mins) have the highest average departure delay.
-Recommendation: Analyze turnaround processes and padding schedules for medium-length flights to reduce bottlenecks.
+- Observation: LAX to JFK is the most delayed route.
+Recommendation: Consider adjusting buffer times or rescheduling flight slots for this route to align with congestion periods at both endpoints.
 
-- 77% of cancellations were due to weather-related issues.
-Recommendation: Collaborate with meteorological services for more accurate forecasting and proactive passenger communication strategies.
-
-- Chicago, Atlanta, and Dallas serve as top flight hubs with high volume.
-Recommendation: Prioritize infrastructure investment and staffing strategies in these cities to support efficient hub operations and reduce congestion.
+- Observation: Flight distances and volume trend upward from October to December, indicating a seasonal surge.
+Recommendation: Prepare for higher demand and longer routes in Q4 with proactive resource planning and route optimization efforts.
 
 --- 
 
