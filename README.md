@@ -109,8 +109,6 @@ This long-haul coast-to-coast route recorded the highest number of delays, sugge
 
 ### Airline Operational Performance
 
-- Endeavor Air Inc. consistently led all airlines in on-time arrival performance across Q4, ranking #1 each month. Their on-time rate exceeded 90%, significantly outperforming peers.
-
 - Despite industry-wide delays, some airlines maintained low delay percentages. For example, top third of airlines in on-time departures had average departure delays under 30 minutes, compared to over an hour for the bottom third.
 
 - Flight cancellations were overwhelmingly driven by weather conditions (77%), followed by carrier-related issues (14%). This shows that external factors dominate airline reliability, suggesting limited control over total disruptions.
