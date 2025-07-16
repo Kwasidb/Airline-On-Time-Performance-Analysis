@@ -14,11 +14,11 @@ Stakeholders across the DOT, including regulatory teams, airport authorities, in
 
 Insights and recommendations are provided on the following key areas:
 
-- Airline Operational Performance: Which airlines consistently meet their schedules? Are certain carriers outperforming others in terms of cancellations and on-time arrivals?
-
+- Delay Drivers: What are the primary contributors to flight delays? Can these delays be mitigated? Where and when are delays most frequently occurring?
+  
 - Airport & Route Analysis: Which airports experience the highest volumes of delayed or canceled flights? Are there specific routes that underperform or show operational challenges?
 
-- Flight Delay Trends & Patterns: What are the most common causes of flight delays? Are there temporal or geographic patterns in delay occurrences?
+- Airline Operational Performance: Which airlines consistently meet their schedules? Are certain carriers outperforming others in terms of cancellations and on-time arrivals?
 
 The SQL queries used to inspect and clean the data for this analysis can be found [here](Database%Design.sql).
 
@@ -53,7 +53,7 @@ The Department of Transportation’s main database structure for this analysis c
 ### Overview of Findings
 This analysis of U.S. commercial flight performance revealed key operational inefficiencies and delay patterns impacting both airlines and airports. Reporting airlines across the industry maintain a 84% on-time departure rate, with 16% of flights being delayed for 15 minutes or more. Flight cancellations should not pose a major concern for leadership, as cancellations only account for 1% of total flights. Major hubs like Atlanta, Chicago, and Dallas handled the highest volumes, often experiencing notable delay variability.
 
-![Business Overview](Dashboard%20Image.jpg)
+![Overview](Report%20Images/Overview.pdf)
 
 ### Airline Operational Performance
 
