@@ -118,7 +118,7 @@ This long-haul coast-to-coast route recorded the highest number of delays, sugge
 - Controllable delays (carrier and national system-related) made up a significant share of total delays for certain airlines—up to 60%, indicating room for internal process improvements.
 
 ---
-## Recommedations
+## Recommendations
 
 Based on the insights and findings above, we would recommend the Operations and Network Planning teams to consider the following:
 
